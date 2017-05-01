@@ -10,26 +10,33 @@
             <ImageBrush ImageSource ="Image/dnepr.jpg" />
         </Grid.Background>
        
-        <Ellipse x:Name="M1" Tag="1" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="49,641,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Ellipse x:Name="Komunarivska" Tag="1" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="49,641,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M11" Tag="2"  HorizontalAlignment="Left" Height="27" Margin="114,609,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
 
-        <Ellipse x:Name="M2" Tag="3" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="137,529,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Ellipse x:Name="ProspectSvobodi" Tag="3" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="137,529,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M21" Tag="4"  HorizontalAlignment="Left" Height="27" Margin="228,539,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M22" Tag="5"  HorizontalAlignment="Left" Height="27" Margin="286,530,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
 
-        <Ellipse x:Name="M3" Tag="6" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="344,496,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Ellipse x:Name="Zavodska" Tag="6" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="344,496,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M31" Tag="7"  HorizontalAlignment="Left" Height="27" Margin="409,464,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M33" Tag="8"  HorizontalAlignment="Left" Height="27" Margin="441,423,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
 
-        <Ellipse x:Name="M4" Tag="9" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="459,351,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Ellipse x:Name="Metalurgiv" Tag="9" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="459,351,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M41" Tag="10"  HorizontalAlignment="Left" Height="27" Margin="537,322,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M42" Tag="11"  HorizontalAlignment="Left" Height="27" Margin="587,276,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
 
-        <Ellipse x:Name="M5" Tag="12" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="620,206,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Ellipse x:Name="Metrobudivnikiv" Tag="12" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="620,206,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M51" Tag="13"  HorizontalAlignment="Left" Height="27" Margin="672,162,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
         <Ellipse x:Name="M52" Tag="14"  HorizontalAlignment="Left" Height="27" Margin="697,102,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="9.294,17.607"/>
 
-        <Ellipse x:Name="M6" Tag="15" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="701,18,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Ellipse x:Name="Vokzalna" Tag="15" Fill="Yellow" Stroke="Red" HorizontalAlignment="Left" Height="67" Margin="701,18,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="9.294,17.607"/>
+        <Label  Content="Starting station:" Foreground="White" FontWeight="DemiBold" FontSize="20" HorizontalAlignment="Left" Margin="39,249,0,0" VerticalAlignment="Top"/>
+        <Label  Content="End station:" Foreground="White" FontWeight="DemiBold" FontSize="20" HorizontalAlignment="Left" Margin="77,286,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Start"  Foreground="Yellow" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Margin="209,249,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Stop"  Foreground="Yellow" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Margin="209,288,0,0" VerticalAlignment="Top"/>
+        <Label  Content="Way:" Foreground="White" FontWeight="DemiBold" FontSize="20" HorizontalAlignment="Left" Margin="140,322,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Way" Content=""  Foreground="Yellow" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" Margin="209,327,0,0" VerticalAlignment="Top"/>
+
         <!--<Button x:Name="button" Content="Start_Test"  HorizontalAlignment="Left" Margin="141,94,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <Button x:Name="button1" Content="Stop_Test" HorizontalAlignment="Left" Margin="141,136,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>-->
 

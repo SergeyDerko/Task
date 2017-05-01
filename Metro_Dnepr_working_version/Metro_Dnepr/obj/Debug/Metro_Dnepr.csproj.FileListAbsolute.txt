@@ -11,3 +11,16 @@ D:\Git\Task\Metro_Dnepr\Metro_Dnepr\bin\Debug\Metro_Dnepr.exe
 D:\Git\Task\Metro_Dnepr\Metro_Dnepr\bin\Debug\Metro_Dnepr.pdb
 D:\Git\Task\Metro_Dnepr\Metro_Dnepr\obj\Debug\Metro_Dnepr.exe
 D:\Git\Task\Metro_Dnepr\Metro_Dnepr\obj\Debug\Metro_Dnepr.pdb
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\bin\Debug\Metro_Dnepr.exe.config
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr.exe
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr.pdb
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\bin\Debug\Metro_Dnepr.exe
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\bin\Debug\Metro_Dnepr.pdb
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr.csprojResolveAssemblyReference.cache
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\MainWindow.baml
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\MainWindow.g.cs
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\App.g.cs
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr_MarkupCompile.cache
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr.g.resources
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr.Properties.Resources.resources
+D:\Git\Task\Metro_Dnepr_working_version\Metro_Dnepr\obj\Debug\Metro_Dnepr.csproj.GenerateResource.Cache

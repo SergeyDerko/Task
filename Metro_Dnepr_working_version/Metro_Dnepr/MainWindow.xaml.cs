@@ -32,8 +32,8 @@ namespace Metro_Dnepr
         public MainWindow()
         {
             InitializeComponent();
-            _mas = new[] { M1, M2, M3, M4, M5, M6 };
-            _masOll = new[] {M1,M11,M2,M21,M22,M3,M31,M33,M4,M41,M42,M5,M51,M52,M6};
+            _mas = new[] { Komunarivska, ProspectSvobodi, Zavodska, Metalurgiv, Metrobudivnikiv, Vokzalna };
+            _masOll = new[] { Komunarivska, M11, ProspectSvobodi, M21,M22, Zavodska, M31,M33, Metalurgiv, M41,M42, Metrobudivnikiv, M51,M52, Vokzalna };
             _masLite = new[] {M11, M21, M22, M31, M33, M41, M42, M51, M52};
             Addevent();
             _timer.Tick += Test;
@@ -59,13 +59,23 @@ namespace Metro_Dnepr
                         _start = null;
                         _stop = null;
                         _count = 0;
+                        Start.Content = null;
+                        Stop.Content = null;
+                        Way.Content = null;
                     }
                     i.Fill = Brushes.Aqua;
                     if (!Equals(i, _start) && _start == null)
+                    {
                         _start = i;
-                    else
-                    if (!Equals(i, _stop))
+                        Start.Content = i.Name;
+                    }
+                        
+                    else if (!Equals(i, _stop))
+                    {
                         _stop = i;
+                        Stop.Content = i.Name;
+                    }
+                       
                     if (_start != null && _stop != null)
                     {
                         _flag = true;
@@ -109,6 +119,7 @@ namespace Metro_Dnepr
             if (flag)
             {
                 _timer.Start();
+                  WriteWay();
                 _flag = false;
             }
             else
@@ -129,6 +140,18 @@ namespace Metro_Dnepr
                 _count++;
                 break;
             }
+        }
+
+        private void WriteWay()
+        {
+            Way.Content = $"{_start.Name} -->";
+            foreach (var i in _wey)
+            {
+                if (i.Name == Komunarivska.Name || i.Name == ProspectSvobodi.Name || i.Name == Zavodska.Name ||
+                    i.Name == Metalurgiv.Name || i.Name == Metrobudivnikiv.Name || i.Name == Vokzalna.Name)
+                    Way.Content += $"\n--> {i.Name} -->";
+            }
+            Way.Content += $"\n--> {_start.Name}";
         }
     }
 }
