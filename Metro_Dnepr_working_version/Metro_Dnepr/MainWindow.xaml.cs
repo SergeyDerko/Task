@@ -119,11 +119,13 @@ namespace Metro_Dnepr
             if (flag)
             {
                 _timer.Start();
-                  WriteWay();
                 _flag = false;
             }
             else
+            {
+                WriteWay();
                 _timer.Stop();
+            }
         }
 
         // прорисовка пути
