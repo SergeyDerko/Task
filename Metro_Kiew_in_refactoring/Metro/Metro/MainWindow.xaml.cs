@@ -26,12 +26,14 @@ namespace Metro
         private int _count;
         private bool _flag = true;
         readonly DispatcherTimer _timer = new DispatcherTimer();
+        readonly DispatcherTimer _timerColor = new DispatcherTimer();
         //начальная точка
         private Ellipse _start;
         //конечная точка
         private Ellipse _stop;
-        
-            public MainWindow()
+        bool _flagColor = true;
+
+        public MainWindow()
         {
             InitializeComponent();
             _masStations = new[] { Академмістечко,Житомирська,Святошин,Нивки,Берестейська,Шулявська,ПолітехнічнийІнститут,Вокзальна,
@@ -65,6 +67,8 @@ namespace Metro
             Addevent();
             _timer.Tick += TimerOffOn;
             _timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
+            _timerColor.Tick += TimerColor;
+            _timerColor.Interval = new TimeSpan(0, 0, 0, 0, 60);
         }
 
         private void Addevent()
@@ -76,6 +80,8 @@ namespace Metro
                 {
                     if (_start != null && _stop != null)
                     {
+                        Way.Content = null;
+                        _wey = null;
                         foreach (var j in _masStationsRed)
                         {
                             j.Fill = Brushes.Red;
@@ -96,17 +102,18 @@ namespace Metro
                         _stop = null;
                         _count = 0;
                         Timer(false);
-                        Way.Content = null;
                     }
                     i.Fill = Brushes.Aqua;
                     if (!Equals(i, _start) && _start == null)
                     {
                         _start = i;
+                        Way.Content = $"   Начальна станцiя :  {i.Name}";
                     }
 
                     else if (!Equals(i, _stop))
                     {
                         _stop = i;
+                        Way.Content += $"\n                               >>>ПОШУК ШЛЯХУ<<<\n      Кiнцева станцiя :   {i.Name}";
                     }
 
                     if (_start != null && _stop != null)
@@ -524,6 +531,7 @@ namespace Metro
                 if (_start != null)
                 WriteWay();
                 _timer.Stop();
+                _timerColor.Start();
             }
         }
 
@@ -542,18 +550,47 @@ namespace Metro
                 break;
             }
         }
+        private void TimerColor(object sender, EventArgs e)
+        {
+            if (_wey != null)
+            {
+                if (_flagColor)
+                {
+                    _start.Fill = Brushes.Aquamarine;
+                    for (int i = _wey.Count - 1; i >= 0; i--)
+                    {
+                        _wey[i].Fill = Brushes.Aquamarine;
+                    }
+                    _stop.Fill = Brushes.Aquamarine;
+                    _flagColor = false;
+                    return;
+                }
+                if (!_flagColor)
+                {
+                    _start.Fill = Brushes.Khaki;
+                    for (int i = _wey.Count - 1; i >= 0; i--)
+                    {
+                        _wey[i].Fill = Brushes.Khaki;
+                    }
+                    _stop.Fill = Brushes.Khaki;
+                    _flagColor = true;
+                }
+            }
+            else _timerColor.Stop();
+            
+        }
 
         //список станций
         private void WriteWay()
         {
             
-            Way.Content = $"Начальна станцiя :  {_start.Name}";
+            Way.Content = $"Начальна станцiя :   {_start.Name}";
             foreach (var i in _wey)
             {
                 if (i.Name.Length > 3 )
                     Way.Content += $"\n                                    {i.Name}";
             } 
-            Way.Content += $"\n   Кiнцева станцiя :   {_stop.Name}";
+            Way.Content += $"\n    Кiнцева станцiя :  {_stop.Name}";
         }
 
     }
