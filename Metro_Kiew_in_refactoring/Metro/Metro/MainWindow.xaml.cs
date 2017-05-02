@@ -96,21 +96,17 @@ namespace Metro
                         _stop = null;
                         _count = 0;
                         Timer(false);
-                        //Start.Content = null;
-                        //Stop.Content = null;
-                        //Way.Content = null;
+                        Way.Content = null;
                     }
                     i.Fill = Brushes.Aqua;
                     if (!Equals(i, _start) && _start == null)
                     {
                         _start = i;
-                        //Start.Content = i.Name;
                     }
 
                     else if (!Equals(i, _stop))
                     {
                         _stop = i;
-                        //Stop.Content = i.Name;
                     }
 
                     if (_start != null && _stop != null)
@@ -128,7 +124,6 @@ namespace Metro
         {
             var qvery = new List<Ellipse>();
             Ellipse[] masStart;
-            Ellipse[] masStop;
             //Если выбранна только красная линия
             if (_masStationsRed.Contains(start) && _masStationsRed.Contains(stop))
             {
@@ -527,7 +522,8 @@ namespace Metro
             }
             else
             {
-                //WriteWay();
+                if (_start != null)
+                WriteWay();
                 _timer.Stop();
             }
         }
@@ -549,17 +545,17 @@ namespace Metro
         }
 
         //список станций
-        //private void WriteWay()
-        //{
-        //    Way.Content = $"{_start.Name} -->";
-        //    foreach (var i in _wey)
-        //    {
-        //        if (i.Name == Komunarivska.Name || i.Name == ProspectSvobodi.Name || i.Name == Zavodska.Name ||
-        //            i.Name == Metalurgiv.Name || i.Name == Metrobudivnikiv.Name || i.Name == Vokzalna.Name)
-        //            Way.Content += $"\n--> {i.Name} -->";
-        //    }
-        //    Way.Content += $"\n--> {_start.Name}";
-        //}
+        private void WriteWay()
+        {
+            
+            Way.Content = $"Начальна станцiя :  {_start.Name}";
+            foreach (var i in _wey)
+            {
+                if (i.Name.Length > 3 )
+                    Way.Content += $"\n                                    {i.Name}";
+            } 
+            Way.Content += $"\n   Кiнцева станцiя :   {_stop.Name}";
+        }
 
     }
 }

@@ -233,6 +233,8 @@
         <Ellipse x:Name="G45" Tag="60"  HorizontalAlignment="Left" Height="8" Margin="914,523,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
 
         <Ellipse x:Name="ЧервонийХутір" Tag="61"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="918,504,0,0" VerticalAlignment="Top" Width="16"/>
-
+       
+        <Label x:Name="Way" Content=""  Foreground="Black" FontWeight="Bold" FontSize="12" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top"/>
+        
     </Grid>
 </Window>
