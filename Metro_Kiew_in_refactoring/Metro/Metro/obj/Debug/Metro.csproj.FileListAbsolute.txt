@@ -25,3 +25,16 @@ D:\Git\Task\Metro_Kiew_in_developing\Metro\Metro\obj\Debug\Metro_MarkupCompile.c
 D:\Git\Task\Metro_Kiew_in_developing\Metro\Metro\obj\Debug\Metro.g.resources
 D:\Git\Task\Metro_Kiew_in_developing\Metro\Metro\obj\Debug\Metro.Properties.Resources.resources
 D:\Git\Task\Metro_Kiew_in_developing\Metro\Metro\obj\Debug\Metro.csproj.GenerateResource.Cache
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\bin\Debug\Metro.exe.config
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro.exe
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro.pdb
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\bin\Debug\Metro.exe
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\bin\Debug\Metro.pdb
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro.csprojResolveAssemblyReference.cache
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\MainWindow.baml
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\MainWindow.g.cs
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\App.g.cs
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro_MarkupCompile.cache
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro.g.resources
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro.Properties.Resources.resources
+D:\Git\Task\Metro_Kiew_in_refactoring\Metro\Metro\obj\Debug\Metro.csproj.GenerateResource.Cache

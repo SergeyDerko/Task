@@ -199,7 +199,7 @@ namespace Metro
             //Если красная начальная и синяя конечная линия линии
             if (_masStationsRed.Contains(start) && _masStationsBlue.Contains(stop))
             {
-                if (int.Parse(start.Tag.ToString()) < 27)
+                if (int.Parse(start.Tag.ToString()) <= 27)
                 {
                     masStart = _masOllRed.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -209,7 +209,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) > 27)
+                if (int.Parse(start.Tag.ToString()) >= 27)
                 {
                     masStart = _masOllRed.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -219,11 +219,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) == 27)
-                {
-                    qvery.Add(start);
-                }
-                if (int.Parse(stop.Tag.ToString()) < 23)
+                if (int.Parse(stop.Tag.ToString()) <= 23)
                 {
                     masStart = _masOllBlue.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -233,7 +229,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) > 23)
+                if (int.Parse(stop.Tag.ToString()) >= 23)
                 {
                     masStart = _masOllBlue.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -242,16 +238,12 @@ namespace Metro
                             int.Parse(i.Tag.ToString()) > 22)
                             qvery.Add(i);
                     }
-                }
-                if (int.Parse(stop.Tag.ToString()) == 23)
-                {
-                    qvery.Add(start);
                 }
             }
             //если красная начальная и зеленая конечная
             if (_masStationsRed.Contains(start) && _masStationsGreen.Contains(stop))
             {
-                if (int.Parse(start.Tag.ToString()) < 25)
+                if (int.Parse(start.Tag.ToString()) <= 25)
                 {
                     masStart = _masOllRed.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -261,7 +253,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) > 25)
+                if (int.Parse(start.Tag.ToString()) >= 25)
                 {
                     masStart = _masOllRed.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -271,11 +263,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) == 25)
-                {
-                    qvery.Add(start);
-                }
-                if (int.Parse(stop.Tag.ToString()) < 21)
+                if (int.Parse(stop.Tag.ToString()) <= 21)
                 {
                     masStart = _masOllGreen.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -285,7 +273,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) > 21)
+                if (int.Parse(stop.Tag.ToString()) >= 21)
                 {
                     masStart = _masOllGreen.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -295,15 +283,11 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) == 21)
-                {
-                    qvery.Add(start);
-                }
             }
             //если синяя начальная и зеленая конечная
             if (_masStationsBlue.Contains(start) && _masStationsGreen.Contains(stop))
             {
-                if (int.Parse(start.Tag.ToString()) < 26)
+                if (int.Parse(start.Tag.ToString()) <= 26)
                 {
                     masStart = _masOllBlue.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -313,7 +297,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) > 26)
+                if (int.Parse(start.Tag.ToString()) >= 26)
                 {
                     masStart = _masOllBlue.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -323,11 +307,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) == 26)
-                {
-                    qvery.Add(start);
-                }
-                if (int.Parse(stop.Tag.ToString()) < 24)
+                if (int.Parse(stop.Tag.ToString()) <= 24)
                 {
                     masStart = _masOllGreen.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -337,7 +317,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) > 24)
+                if (int.Parse(stop.Tag.ToString()) >= 24)
                 {
                     masStart = _masOllGreen.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -347,15 +327,11 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) == 24)
-                {
-                    qvery.Add(start);
-                }
             }
             //если синяя начальная и красная конечная
             if (_masStationsBlue.Contains(start) && _masStationsRed.Contains(stop))
             {
-                if (int.Parse(start.Tag.ToString()) < 23)
+                if (int.Parse(start.Tag.ToString()) <= 23)
                 {
                     masStart = _masOllBlue.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -365,7 +341,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) > 23)
+                if (int.Parse(start.Tag.ToString()) >= 23)
                 {
                     masStart = _masOllBlue.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -375,11 +351,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) == 23)
-                {
-                    qvery.Add(start);
-                }
-                if (int.Parse(stop.Tag.ToString()) < 27)
+                if (int.Parse(stop.Tag.ToString()) <= 27)
                 {
                     masStart = _masOllRed.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -389,7 +361,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) > 27)
+                if (int.Parse(stop.Tag.ToString()) >= 27)
                 {
                     masStart = _masOllRed.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -399,15 +371,11 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) == 27)
-                {
-                    qvery.Add(start);
-                }
             }
             //если зеленая начальная и красная конечная
             if (_masStationsGreen.Contains(start) && _masStationsRed.Contains(stop))
             {
-                if (int.Parse(start.Tag.ToString()) < 21)
+                if (int.Parse(start.Tag.ToString()) <= 21)
                 {
                     masStart = _masOllGreen.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -417,7 +385,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) > 21)
+                if (int.Parse(start.Tag.ToString()) >= 21)
                 {
                     masStart = _masOllGreen.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -427,11 +395,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) == 21)
-                {
-                    qvery.Add(start);
-                }
-                if (int.Parse(stop.Tag.ToString()) < 25)
+                if (int.Parse(stop.Tag.ToString()) <= 25)
                 {
                     masStart = _masOllRed.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -441,7 +405,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) > 25)
+                if (int.Parse(stop.Tag.ToString()) >= 25)
                 {
                     masStart = _masOllRed.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -451,15 +415,11 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) == 25)
-                {
-                    qvery.Add(start);
-                }
             }
             //если зеленая начальная и синяя конечная
             if (_masStationsGreen.Contains(start) && _masStationsBlue.Contains(stop))
             {
-                if (int.Parse(start.Tag.ToString()) < 24)
+                if (int.Parse(start.Tag.ToString()) <= 24)
                 {
                     masStart = _masOllGreen.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -469,7 +429,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) > 24)
+                if (int.Parse(start.Tag.ToString()) >= 24)
                 {
                     masStart = _masOllGreen.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -479,11 +439,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(start.Tag.ToString()) == 24)
-                {
-                    qvery.Add(start);
-                }
-                if (int.Parse(stop.Tag.ToString()) < 26)
+                if (int.Parse(stop.Tag.ToString()) <= 26)
                 {
                     masStart = _masOllBlue.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -493,7 +449,7 @@ namespace Metro
                             qvery.Add(i);
                     }
                 }
-                if (int.Parse(stop.Tag.ToString()) > 26)
+                if (int.Parse(stop.Tag.ToString()) >= 26)
                 {
                     masStart = _masOllBlue.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
                     foreach (var i in masStart)
@@ -502,10 +458,6 @@ namespace Metro
                             int.Parse(i.Tag.ToString()) > 25)
                             qvery.Add(i);
                     }
-                }
-                if (int.Parse(stop.Tag.ToString()) == 26)
-                {
-                    qvery.Add(start);
                 }
             }
 
