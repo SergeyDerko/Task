@@ -64,7 +64,7 @@ namespace Metro
                                   G33,G34,G35,G36,G37,G38,G39,Славутич,G40,Осокорки,G41,Позняки,G42,Харківська,G43,Бориспільська,G44,Вирлиця,G45,ЧервонийХутір};
             Addevent();
             _timer.Tick += TimerOffOn;
-            _timer.Interval = new TimeSpan(0, 0, 0, 0, 50);
+            _timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
         }
 
         private void Addevent()
@@ -124,6 +124,53 @@ namespace Metro
         {
             var qvery = new List<Ellipse>();
             Ellipse[] masStart;
+            //между переходными станциями
+            if (Equals(_start, ПлощаЛьваТолстого) && Equals(_stop, Театральна))
+            {
+                qvery.Add(ПалацСпорту);
+                qvery.Add(G19);
+                qvery.Add(G18);
+                qvery.Add(ЗолотіВорота);
+                return qvery;
+            }
+            if (Equals(_stop, ПлощаЛьваТолстого) && Equals(_start, Театральна))
+            {
+                qvery.Add(ЗолотіВорота);
+                qvery.Add(G18);
+                qvery.Add(G19);
+                qvery.Add(ПалацСпорту);
+                return qvery;
+            }
+            if (Equals(_start, ЗолотіВорота) && Equals(_stop, МайданНезалежності))
+            {
+                qvery.Add(Театральна);
+                qvery.Add(R16);
+                qvery.Add(Хрещатик);
+                return qvery;
+            }
+            if (Equals(_stop, ЗолотіВорота) && Equals(_start, МайданНезалежності))
+            {
+                qvery.Add(Хрещатик);
+                qvery.Add(R16);
+                qvery.Add(Театральна);
+                return qvery;
+            }
+            if (Equals(_start, ПалацСпорту) && Equals(_stop, Хрещатик))
+            {
+                qvery.Add(ПлощаЛьваТолстого);
+                qvery.Add(B17);
+                qvery.Add(B16);
+                qvery.Add(МайданНезалежності);
+                return qvery;
+            }
+            if (Equals(_stop, ПалацСпорту) && Equals(_start, Хрещатик))
+            {
+                qvery.Add(МайданНезалежності);
+                qvery.Add(B16);
+                qvery.Add(B17);
+                qvery.Add(ПлощаЛьваТолстого);
+                return qvery;
+            }
             //Если выбранна только красная линия
             if (_masStationsRed.Contains(start) && _masStationsRed.Contains(stop))
             {
