@@ -1,131 +1,203 @@
 ﻿using System;
-using System.Windows;
-using System.Windows.Input;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Metro
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow
     {
-
+        //Массивы для выбора станций
+        private readonly Ellipse[] _masStations;
+        //Массив маленьких элипсов
+        private readonly Ellipse[] _masLite;
+        //Массивы станций по веткам
+        private readonly Ellipse[] _masStationsRed;
+        private readonly Ellipse[] _masStationsBlue;
+        private readonly Ellipse[] _masStationsGreen;
+        //Массивы всех элементов по веткам
+        private readonly Ellipse[] _masOllRed;
+        private readonly Ellipse[] _masOllBlue;
+        private readonly Ellipse[] _masOllGreen;
+        //выбранный маршрут
+        private List<Ellipse> _wey;
         private int _count;
         private bool _flag = true;
         readonly DispatcherTimer _timer = new DispatcherTimer();
+        //начальная точка
         private Ellipse _start;
+        //конечная точка
         private Ellipse _stop;
-
-        readonly Ellipse[] _ollEllipses;
+        
             public MainWindow()
         {
             InitializeComponent();
-            _ollEllipses = new []
-            {
-                Red1,Red2,Red3,Red4,Red5,Red6,Red7,Red8,Red9,Red10,Red11,Red12,Red13,Red14,
-                Red15, Red16,Red17,Red18,Blue1,Blue2,Blue3,Blue4,Blue5,Blue6,Blue7,Blue8,
-                Blue9,Blue10,Blue11,Blue12,Blue13,Blue14,Blue15,Blue16,Blue17,Green1,Green2,Green3,
-                Green4,Green5,Green6,Green7,Green8,Green9,Green10,Green11,Green12,Green13,Green14
-            };
-
+            _masStations = new[] { Академмістечко,Житомирська,Святошин,Нивки,Берестейська,Шулявська,ПолітехнічнийІнститут,Вокзальна,
+                                   Університет,Театральна,Хрещатик,Арсенальна,Дніпро,Гідропарк,Лівобережна,Дарниця,Чернігівська,Лісова,
+                                   ГероївДніпра,Мінська,Оболонь,Петрівка,ТарасаШевченка,КонтрактоваПлоща, ПоштоваПлоща,МайданНезалежності,
+                                   ПлощаЛьваТолстого,Олімпійска,ПалацУкраїна,Либідська,Деміївська,Голосіївська,Васильківська,ВиставковийЦентр,
+                                   Іподром,Теремки,Сирець,Дрогожичі,Лукянівська,ЗолотіВорота,ПалацСпорту,Кловська,Печерська,ДружбиНародів,
+                                   Видубичі,Славутич,Осокорки,Позняки,Харківська,Бориспільська,Вирлиця,ЧервонийХутір} ;
+            _masLite = new[] {R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21,R22,R23,R24,R25,R26,R27,
+                              R28,R29,R30,R31,B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,B13,B14,B15,B16,B17,B18,B19,B20,B21,B22,B23,
+                              B24,B25,B26,B27,B28,B29,B30,B31,B32,B33,B34,B35,B36,B37,B38,G1,G2,G3,G4,G5,G6,G7,G8,G9,G10,G11,G12,
+                              G13,G14,G15,G16,G17,G18,G19,G20,G21,G22,G23,G24,G25,G26,G27,G28,G29,G30,G31,G32,G33,G34,G35,G36,G37,
+                              G38,G39,G40,G41,G42,G43,G44,G45};
+            _masStationsRed = new[] {Академмістечко,Житомирська,Святошин,Нивки,Берестейська,Шулявська,ПолітехнічнийІнститут,Вокзальна,
+                                     Університет,Театральна,Хрещатик,Арсенальна,Дніпро,Гідропарк,Лівобережна,Дарниця,Чернігівська,Лісова};
+            _masStationsBlue = new[] {ГероївДніпра,Мінська,Оболонь,Петрівка,ТарасаШевченка,КонтрактоваПлоща,
+                                      ПоштоваПлоща,МайданНезалежності,ПлощаЛьваТолстого,Олімпійска,ПалацУкраїна,Либідська,Деміївська,
+                                      Голосіївська,Васильківська,ВиставковийЦентр,Іподром,Теремки};
+            _masStationsGreen = new[] {Сирець,Дрогожичі,Лукянівська,ЗолотіВорота,ПалацСпорту,Кловська,Печерська,ДружбиНародів,Видубичі,
+                                       Славутич,Осокорки,Позняки,Харківська,Бориспільська,Вирлиця,ЧервонийХутір};
+            _masOllRed = new[] { Академмістечко,R1,R2,Житомирська,R3,Святошин,R4,Нивки,R5,Берестейська,R6,Шулявська,R7,R8,ПолітехнічнийІнститут,
+                                R9,R10,R11,Вокзальна,R12,R13,Університет,R14,R15,Театральна,R16,Хрещатик,R17,R18,R19, Арсенальна,R20,R21,Дніпро,
+                                R22,R23,R24,Гідропарк,R25,R26,R27,Лівобережна,R28,R29,Дарниця,R30,Чернігівська,R31,Лісова };
+            _masOllBlue = new[] { ГероївДніпра, B1,Мінська,B2,Оболонь,B3,B4,Петрівка,B5,B6,B7,ТарасаШевченка,B8,B9,КонтрактоваПлоща,B10,B11,B12,
+                                  ПоштоваПлоща,B13,B14,B15,МайданНезалежності,B16,B17,ПлощаЛьваТолстого,B18,Олімпійска,B19,B20,B21,ПалацУкраїна,
+                                  B22,B23,Либідська,B24,B25,B26,Деміївська,B27,B28,Голосіївська,B29,B30,B31,B32,Васильківська,B33,ВиставковийЦентр,
+                                  B34,Іподром,B35,B36,B37,B38,Теремки};
+            _masOllGreen = new[] {Сирець,G1,G2,Дрогожичі,G3,G4,G5,G6,G7,G8,Лукянівська,G9,G10,G11,G12,G13,G14,G15,G16,G17,ЗолотіВорота,G18,G19,
+                                  ПалацСпорту,G20,G21,Кловська,G22,G23,G24,Печерська,G25,G26,G27,ДружбиНародів,G28,G29,G30,G31,G32,Видубичі,
+                                  G33,G34,G35,G36,G37,G38,G39,Славутич,G40,Осокорки,G41,Позняки,G42,Харківська,G43,Бориспільська,G44,Вирлиця,G45,ЧервонийХутір};
             Addevent();
-            _timer.Tick += Test;
-            _timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
+            _timer.Tick += TimerOffOn;
+            _timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
         }
 
         private void Addevent()
         {
-            foreach (var i in _ollEllipses)
+
+            foreach (var i in _masStations)
             {
                 i.MouseDown += delegate
                 {
-                    i.Fill = Brushes.Aqua;
-                    //    if(!Equals(i, _start))
-                    //        _start = i;
-                    //    if (!Equals(i, _stop))
-                    //        _stop = i;
-                    //    if (_start!= null && _stop!= null)
-                    //        Run(_start,_stop);
-                    //};
+                    if (_start != null && _stop != null)
+                    {
+                        foreach (var j in _masStationsRed)
+                        {
+                            j.Fill = Brushes.Red;
+                        }
+                        foreach (var j in _masStationsBlue)
+                        {
+                            j.Fill = Brushes.Blue;
+                        }
+                        foreach (var j in _masStationsGreen)
+                        {
+                            j.Fill = Brushes.Green;
+                        }
+                        foreach (var j in _masLite)
+                        {
+                            j.Fill = null;
+                        }
+                        _start = null;
+                        _stop = null;
+                        _count = 0;
+                        //Start.Content = null;
+                        //Stop.Content = null;
+                        //Way.Content = null;
+                    }
+                    i.Fill = Brushes.Yellow;
+                    if (!Equals(i, _start) && _start == null)
+                    {
+                        _start = i;
+                        //Start.Content = i.Name;
+                    }
+
+                    else if (!Equals(i, _stop))
+                    {
+                        _stop = i;
+                        //Stop.Content = i.Name;
+                    }
+
+                    if (_start != null && _stop != null)
+                    {
+                        _flag = true;
+                        _wey = Run(_start, _stop);
+                        Timer(_flag);
+                    }
+
                 };
             }
         }
 
-        private void Run(Ellipse start, Ellipse stop)
+        private List<Ellipse> Run(Ellipse start, Ellipse stop)
         {
-            
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            Timer(_flag);
-            for (int j = 0; j < _ollEllipses.Length; j++)
+            var qvery = new List<Ellipse>();
+            Ellipse[] masStart;
+            Ellipse[] masStop;
+            if (_masStationsRed.Contains(start) && _masStationsRed.Contains(stop))
             {
-                if (j < 18)
-                    _ollEllipses[j].Fill = Brushes.Red;
-                if (j >= 18 && j < 35)
-                    _ollEllipses[j].Fill = Brushes.Blue;
-                if (j >= 35)
-                    _ollEllipses[j].Fill = Brushes.Green;
+                if (int.Parse(start.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
+                {
+                    masStart = _masOllRed.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
+                    foreach (var i in masStart)
+                    {
+                        if (int.Parse(i.Tag.ToString()) > int.Parse(start.Tag.ToString()) &&
+                            int.Parse(i.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
+                            qvery.Add(i);
+                    }
+                }
+                if (int.Parse(start.Tag.ToString()) > int.Parse(stop.Tag.ToString()))
+                {
+                    masStart = _masOllRed.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
+                    foreach (var i in masStart)
+                    {
+                        if (int.Parse(i.Tag.ToString()) < int.Parse(start.Tag.ToString()) &&
+                            int.Parse(i.Tag.ToString()) > int.Parse(stop.Tag.ToString()))
+                            qvery.Add(i);
+                    }
+                }
             }
-            _count = 0;
-            _flag = true;
-            Timer(_flag);
             
-
+            return qvery;
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        // включение - отключение таймера
+        private void Timer(bool flag)
         {
-            for (int j = 0; j < _ollEllipses.Length; j++)
-            {
-                if (j < 18)
-                    _ollEllipses[j].Fill = Brushes.Red;
-                if (j >= 18 && j < 35)
-                    _ollEllipses[j].Fill = Brushes.Blue;
-                if (j >= 35)
-                    _ollEllipses[j].Fill = Brushes.Green;
-            }
-            _count = 0;
-            Timer(false);
-        }
-
-        
-
-
-
-         /////////////////////////////////////////////////////////////////////////////////////////////////////////
-        private void Timer( bool flag)
-        {
-
             if (flag)
             {
                 _timer.Start();
                 _flag = false;
             }
-                
             else
+            {
+                //WriteWay();
                 _timer.Stop();
-           
+            }
         }
 
-       
-        private void Test(object sender, EventArgs e)
+        // прорисовка пути
+        private void TimerOffOn(object sender, EventArgs e)
         {
-            if (_count == _ollEllipses.Length)
-                _flag = false;
-            while (_count<_ollEllipses.Length)
+            if (_count == _wey.Count)
             {
-                _ollEllipses[_count].Fill = Brushes.Yellow;
+                _flag = false;
+                Timer(_flag);
+            }
+            while (_count < _wey.Count)
+            {
+                _wey[_count].Fill = Brushes.Yellow;
                 _count++;
                 break;
             }
-           
         }
 
-        
+        //список станций
+        //private void WriteWay()
+        //{
+        //    Way.Content = $"{_start.Name} -->";
+        //    foreach (var i in _wey)
+        //    {
+        //        if (i.Name == Komunarivska.Name || i.Name == ProspectSvobodi.Name || i.Name == Zavodska.Name ||
+        //            i.Name == Metalurgiv.Name || i.Name == Metrobudivnikiv.Name || i.Name == Vokzalna.Name)
+        //            Way.Content += $"\n--> {i.Name} -->";
+        //    }
+        //    Way.Content += $"\n--> {_start.Name}";
+        //}
+
     }
 }

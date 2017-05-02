@@ -12,60 +12,227 @@
         <Grid.Background>
             <ImageBrush ImageSource ="Image/Metro.jpg" />
         </Grid.Background>
+
         <!--Красная линия-->
-        <Ellipse x:Name="Red1" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="20,276,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red2" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="39,326,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red3" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="80,336,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red4"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="112,322,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red5"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="154,320,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red6"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="207,330,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red7"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="271,353,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red8"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="348,392,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red9"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="413,405,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red10"  Fill="Red" Stroke="Green" HorizontalAlignment="Left" Height="23" Margin="469,385,0,0" VerticalAlignment="Top" Width="24"/>
-        <Ellipse x:Name="Red11"  Fill="Red" Stroke="Blue" HorizontalAlignment="Left" Height="24" Margin="502,372,0,0" VerticalAlignment="Top" Width="24"/>
-        <Ellipse x:Name="Red12"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="596,394,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red13"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="651,412,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red14"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="720,387,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red15"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="778,361,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red16"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="824,339,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red17"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="854,326,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Red18"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="886,312,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="Академмістечко" Tag="1" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="20,276,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R1" Tag="2"  HorizontalAlignment="Left" Height="8" Margin="28,297,0,0" VerticalAlignment="Top" Width="9"/>
+        <Ellipse x:Name="R2" Tag="3"  HorizontalAlignment="Left" Height="8" Margin="33,313,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Житомирська" Tag="4" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="39,326,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R3" Tag="5" HorizontalAlignment="Left" Height="8" Margin="62,337,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Святошин" Tag="6" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="80,336,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R4" Tag="7"  HorizontalAlignment="Left" Height="8" Margin="100,332,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Нивки"  Fill="Red" Tag="8" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="112,322,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R5" Tag="9" HorizontalAlignment="Left" Height="8" Margin="137,323,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Берестейська" Tag="10" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="154,320,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R6" Tag="11"  HorizontalAlignment="Left" Height="8" Margin="185,328,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Шулявська" Tag="12" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="207,330,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R7" Tag="13" HorizontalAlignment="Left" Height="8" Margin="232,341,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R8" Tag="14" HorizontalAlignment="Left" Height="8" Margin="253,348,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ПолітехнічнийІнститут" Tag="15" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="271,353,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R9" Tag="16" HorizontalAlignment="Left" Height="8" Margin="292,366,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R10" Tag="17" HorizontalAlignment="Left" Height="8" Margin="312,378,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R11" Tag="18" HorizontalAlignment="Left" Height="8" Margin="332,389,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Вокзальна" Tag="19"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="348,392,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R12" Tag="20" HorizontalAlignment="Left" Height="8" Margin="373,403,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R13" Tag="21"  HorizontalAlignment="Left" Height="8" Margin="394,408,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Університет" Tag="22" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="413,405,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R14" Tag="23"  HorizontalAlignment="Left" Height="8" Margin="436,405,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R15" Tag="24"  HorizontalAlignment="Left" Height="8" Margin="453,400,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Театральна"  Tag="25" Fill="Red" Stroke="Green" HorizontalAlignment="Left" Height="23" Margin="476,383,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.056,0.507"/>
+        <Ellipse x:Name="R16" Tag="26"  HorizontalAlignment="Left" Height="8" Margin="493,385,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Хрещатик"  Tag="27" Fill="Red" Stroke="Blue" HorizontalAlignment="Left" Height="23" Margin="502,372,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.056,0.507"/>
+        <Ellipse x:Name="R17" Tag="28"  HorizontalAlignment="Left" Height="8" Margin="543,383,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R18" Tag="29"  HorizontalAlignment="Left" Height="8" Margin="564,387,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R19" Tag="30"  HorizontalAlignment="Left" Height="8" Margin="582,392,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Арсенальна"  Tag="31" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="596,394,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R20" Tag="32"   HorizontalAlignment="Left" Height="8" Margin="617,405,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R21" Tag="33"  HorizontalAlignment="Left" Height="8" Margin="635,412,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Дніпро"  Tag="34" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="651,412,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R22" Tag="35"   HorizontalAlignment="Left" Height="8" Margin="672,413,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R23" Tag="36"  HorizontalAlignment="Left" Height="8" Margin="690,406,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R24" Tag="37"  HorizontalAlignment="Left" Height="8" Margin="706,398,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Гідропарк"  Tag="38" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="720,387,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R25" Tag="39"  HorizontalAlignment="Left" Height="8" Margin="741,383,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R26" Tag="40"  HorizontalAlignment="Left" Height="8" Margin="755,376,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R27" Tag="41"  HorizontalAlignment="Left" Height="8" Margin="769,370,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Лівобережна"  Tag="42" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="778,361,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R28" Tag="43"  HorizontalAlignment="Left" Height="8" Margin="799,357,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="R29" Tag="44"  HorizontalAlignment="Left" Height="8" Margin="813,350,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Дарниця"  Tag="45" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="824,339,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R30" Tag="46"  HorizontalAlignment="Left" Height="8" Margin="843,337,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Чернігівська"  Tag="47" Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="854,326,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="R31" Tag="48"  HorizontalAlignment="Left" Height="8" Margin="875,323,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Лісова" Tag="49"  Fill="Red" Stroke="Red" HorizontalAlignment="Left" Height="16" Margin="886,312,0,0" VerticalAlignment="Top" Width="16"/>
+
         <!--Синяя линия-->
-        <Ellipse x:Name="Blue1"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="431,52,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue2"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="425,78,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue3"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="421,110,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue4"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="412,170,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue5"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="438,236,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue6"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="474,274,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue7"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="514,318,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue8"  Fill="Blue" Stroke="Green" HorizontalAlignment="Left" Height="23" Margin="495,427,0,0" VerticalAlignment="Top" Width="24"/>
-        <Ellipse x:Name="Blue9"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="480,460,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue10"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="495,524,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue11"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="506,564,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue12"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="470,603,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue13"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="438,634,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue14"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="354,647,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue15"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="334,672,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue16"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="310,695,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Blue17"  Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="214,697,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="ГероївДніпра" Tag="1" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="431,52,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B1" Tag="2"  HorizontalAlignment="Left" Height="8" Margin="432,68,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Мінська"  Tag="3" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="425,78,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B2" Tag="4"  HorizontalAlignment="Left" Height="8" Margin="427,99,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Оболонь"  Tag="5" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="421,110,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B3" Tag="6"  HorizontalAlignment="Left" Height="8" Margin="420,135,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B4" Tag="7"  HorizontalAlignment="Left" Height="8" Margin="416,155,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Петрівка" Tag="8" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="412,170,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B5" Tag="9"  HorizontalAlignment="Left" Height="8" Margin="419,191,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B6" Tag="10"  HorizontalAlignment="Left" Height="8" Margin="425,207,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B7" Tag="11"  HorizontalAlignment="Left" Height="8" Margin="432,224,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ТарасаШевченка"  Tag="12" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="438,236,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B8" Tag="13"  HorizontalAlignment="Left" Height="8" Margin="452,253,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B9" Tag="14"  HorizontalAlignment="Left" Height="8" Margin="465,265,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="КонтрактоваПлоща" Tag="15" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="474,274,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B10" Tag="16"  HorizontalAlignment="Left" Height="8" Margin="490,290,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B11" Tag="17"  HorizontalAlignment="Left" Height="8" Margin="500,299,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B12" Tag="18"  HorizontalAlignment="Left" Height="8" Margin="510,310,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ПоштоваПлоща" Tag="19" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="514,318,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B13" Tag="20"  HorizontalAlignment="Left" Height="8" Margin="518,337,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B14" Tag="21"  HorizontalAlignment="Left" Height="8" Margin="516,350,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B15" Tag="22"  HorizontalAlignment="Left" Height="8" Margin="513,364,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="МайданНезалежності" Tag="22" Fill="Blue" Stroke="Red" HorizontalAlignment="Left" Height="23" Margin="512,372,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.056,0.507"/>
+        <Ellipse x:Name="B16" Tag="23"  HorizontalAlignment="Left" Height="8" Margin="506,400,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B17" Tag="24"  HorizontalAlignment="Left" Height="8" Margin="506,416,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ПлощаЛьваТолстого" Tag="25" Fill="Blue" Stroke="Green" HorizontalAlignment="Left" Height="23" Margin="496,427,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.056,0.507"/>
+        <Ellipse x:Name="B18" Tag="26"  HorizontalAlignment="Left" Height="8" Margin="492,451,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Олімпійска" Tag="27" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="480,460,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B19" Tag="28"  HorizontalAlignment="Left" Height="8" Margin="483,481,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B20" Tag="29"  HorizontalAlignment="Left" Height="8" Margin="488,498,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B21" Tag="30"  HorizontalAlignment="Left" Height="8" Margin="493,513,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ПалацУкраїна" Tag="31" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="495,524,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B22" Tag="32"  HorizontalAlignment="Left" Height="8" Margin="504,542,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B23" Tag="33"  HorizontalAlignment="Left" Height="8" Margin="508,553,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Либідська" Tag="34" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="506,564,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B24" Tag="35"  HorizontalAlignment="Left" Height="8" Margin="501,580,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B25" Tag="36"  HorizontalAlignment="Left" Height="8" Margin="493,589,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B26" Tag="37"  HorizontalAlignment="Left" Height="8" Margin="485,597,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Деміївська" Tag="38" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="470,603,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B27" Tag="39"  HorizontalAlignment="Left" Height="8" Margin="464,618,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B28" Tag="40"  HorizontalAlignment="Left" Height="8" Margin="454,629,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Голосіївська" Tag="41" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="438,634,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B29" Tag="42"  HorizontalAlignment="Left" Height="8" Margin="427,642,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B30" Tag="43"  HorizontalAlignment="Left" Height="8" Margin="412,644,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B31" Tag="44"  HorizontalAlignment="Left" Height="8" Margin="394,645,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B32" Tag="45"  HorizontalAlignment="Left" Height="8" Margin="375,647,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Васильківська" Tag="46" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="354,647,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B33" Tag="47"  HorizontalAlignment="Left" Height="8" Margin="346,663,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ВиставковийЦентр" Tag="48" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="334,672,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B34" Tag="49"  HorizontalAlignment="Left" Height="8" Margin="326,688,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Іподром" Tag="50" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="310,695,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="B35" Tag="51"  HorizontalAlignment="Left" Height="8" Margin="296,701,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B36" Tag="52"  HorizontalAlignment="Left" Height="8" Margin="274,701,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B37" Tag="53"  HorizontalAlignment="Left" Height="8" Margin="254,701,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="B38" Tag="54"  HorizontalAlignment="Left" Height="8" Margin="235,701,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Теремки" Tag="55" Fill="Blue" Stroke="Blue" HorizontalAlignment="Left" Height="16" Margin="214,697,0,0" VerticalAlignment="Top" Width="16"/>
+
         <!--Зеленая линия-->
-        <Ellipse x:Name="Green1"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="180,228,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green2"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="230,236,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green3"  Fill="Green" Stroke="Green"  HorizontalAlignment="Left" Height="16" Margin="336,290,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green4"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="543,443,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green5"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="572,486,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green6"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="596,538,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green7"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="648,608,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green8"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="764,621,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green9"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="800,609,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green10"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="828,596,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green11"  Fill="Green"  Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="854,579,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green12"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="880,560,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green13"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="898,534,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="Green14"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="918,504,0,0" VerticalAlignment="Top" Width="16"/>
-        <Button x:Name="button" Content="Start_Test"  HorizontalAlignment="Left" Margin="141,94,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Stop_Test" HorizontalAlignment="Left" Margin="141,136,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Ellipse x:Name="Сирець" Tag="1" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="180,228,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G1" Tag="2"  HorizontalAlignment="Left" Height="8" Margin="200,234,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G2" Tag="3"  HorizontalAlignment="Left" Height="8" Margin="216,236,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Дрогожичі" Tag="4" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="230,236,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G3" Tag="5"   HorizontalAlignment="Left" Height="8" Margin="251,246,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G4" Tag="6"   HorizontalAlignment="Left" Height="8" Margin="264,253,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G5" Tag="7"   HorizontalAlignment="Left" Height="8" Margin="278,260,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G6" Tag="8"   HorizontalAlignment="Left" Height="8" Margin="294,269,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G7" Tag="9"   HorizontalAlignment="Left" Height="8" Margin="310,278,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G8" Tag="10"  HorizontalAlignment="Left" Height="8" Margin="324,286,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Лукянівська" Tag="11" Fill="Green" Stroke="Green"  HorizontalAlignment="Left" Height="16" Margin="336,290,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G9"  Tag="12"  HorizontalAlignment="Left" Height="8" Margin="355,301,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G10" Tag="13"  HorizontalAlignment="Left" Height="8" Margin="369,307,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G11" Tag="14"  HorizontalAlignment="Left" Height="8" Margin="383,312,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G12" Tag="15"  HorizontalAlignment="Left" Height="8" Margin="397,318,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G13" Tag="16"  HorizontalAlignment="Left" Height="8" Margin="413,325,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G14" Tag="17"  HorizontalAlignment="Left" Height="8" Margin="428,335,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G15" Tag="18"  HorizontalAlignment="Left" Height="8" Margin="438,345,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G16" Tag="19"  HorizontalAlignment="Left" Height="8" Margin="448,356,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G17" Tag="20"  HorizontalAlignment="Left" Height="8" Margin="459,368,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ЗолотіВорота" Tag="21" Fill="Green" Stroke="Red" HorizontalAlignment="Left" Height="23" Margin="467,385,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.056,0.507"/>
+        <Ellipse x:Name="G18" Tag="22"  HorizontalAlignment="Left" Height="8" Margin="485,408,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G19" Tag="23"  HorizontalAlignment="Left" Height="8" Margin="492,419,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ПалацСпорту" Tag="24" Fill="Green" Stroke="Blue" HorizontalAlignment="Left" Height="23" Margin="506,429,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.056,0.507"/>
+        <Ellipse x:Name="G20" Tag="25"  HorizontalAlignment="Left" Height="8" Margin="523,441,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G21" Tag="26"  HorizontalAlignment="Left" Height="8" Margin="534,443,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Кловська" Tag="27" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="543,443,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G22" Tag="28"  HorizontalAlignment="Left" Height="8" Margin="556,458,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G23" Tag="29"  HorizontalAlignment="Left" Height="8" Margin="563,467,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G24" Tag="30"  HorizontalAlignment="Left" Height="8" Margin="568,478,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Печерська" Tag="31" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="572,486,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G25" Tag="32"  HorizontalAlignment="Left" Height="8" Margin="556,458,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G26" Tag="33"  HorizontalAlignment="Left" Height="8" Margin="563,467,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G27" Tag="34"  HorizontalAlignment="Left" Height="8" Margin="568,478,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ДружбиНародів" Tag="35" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="596,538,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G28" Tag="36"  HorizontalAlignment="Left" Height="8" Margin="609,557,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G29" Tag="37"  HorizontalAlignment="Left" Height="8" Margin="615,570,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G30" Tag="38"  HorizontalAlignment="Left" Height="8" Margin="623,582,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G31" Tag="39"  HorizontalAlignment="Left" Height="8" Margin="631,593,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G32" Tag="40"  HorizontalAlignment="Left" Height="8" Margin="640,603,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Видубичі" Tag="41" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="648,608,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G33" Tag="42"  HorizontalAlignment="Left" Height="8" Margin="667,618,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G34" Tag="43"  HorizontalAlignment="Left" Height="8" Margin="681,621,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G35" Tag="44"  HorizontalAlignment="Left" Height="8" Margin="696,623,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G36" Tag="45"  HorizontalAlignment="Left" Height="8" Margin="710,625,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G37" Tag="46"  HorizontalAlignment="Left" Height="8" Margin="727,627,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G38" Tag="47"  HorizontalAlignment="Left" Height="8" Margin="741,627,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G39" Tag="48"  HorizontalAlignment="Left" Height="8" Margin="755,627,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Славутич" Tag="49" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="764,621,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G40" Tag="50"  HorizontalAlignment="Left" Height="8" Margin="786,620,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Осокорки" Tag="51" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="800,609,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G41" Tag="52"  HorizontalAlignment="Left" Height="8" Margin="818,607,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Позняки" Tag="53" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="828,596,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G42" Tag="54"  HorizontalAlignment="Left" Height="8" Margin="845,592,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Харківська" Tag="55" Fill="Green"  Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="854,579,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G43" Tag="56"  HorizontalAlignment="Left" Height="8" Margin="871,574,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Бориспільська" Tag="57" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="880,560,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G44" Tag="58"  HorizontalAlignment="Left" Height="8" Margin="893,552,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="Вирлиця" Tag="59" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="898,534,0,0" VerticalAlignment="Top" Width="16"/>
+        <Ellipse x:Name="G45" Tag="60"  HorizontalAlignment="Left" Height="8" Margin="914,523,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+
+        <Ellipse x:Name="ЧервонийХутір" Tag="61"  Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="918,504,0,0" VerticalAlignment="Top" Width="16"/>
 
     </Grid>
 </Window>
