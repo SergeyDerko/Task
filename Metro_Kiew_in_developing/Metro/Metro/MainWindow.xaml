@@ -194,9 +194,9 @@
         <Ellipse x:Name="G24" Tag="30"  HorizontalAlignment="Left" Height="8" Margin="568,478,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
 
         <Ellipse x:Name="Печерська" Tag="31" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="572,486,0,0" VerticalAlignment="Top" Width="16"/>
-        <Ellipse x:Name="G25" Tag="32"  HorizontalAlignment="Left" Height="8" Margin="556,458,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
-        <Ellipse x:Name="G26" Tag="33"  HorizontalAlignment="Left" Height="8" Margin="563,467,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
-        <Ellipse x:Name="G27" Tag="34"  HorizontalAlignment="Left" Height="8" Margin="568,478,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G25" Tag="32"  HorizontalAlignment="Left" Height="8" Margin="582,504,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G26" Tag="33"  HorizontalAlignment="Left" Height="8" Margin="587,517,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>
+        <Ellipse x:Name="G27" Tag="34"  HorizontalAlignment="Left" Height="8" Margin="592,528,0,0" VerticalAlignment="Top" Width="10" RenderTransformOrigin="0.778,2.542"/>
 
         <Ellipse x:Name="ДружбиНародів" Tag="35" Fill="Green" Stroke="Green" HorizontalAlignment="Left" Height="16" Margin="596,538,0,0" VerticalAlignment="Top" Width="16"/>
         <Ellipse x:Name="G28" Tag="36"  HorizontalAlignment="Left" Height="8" Margin="609,557,0,0" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.778,2.542"/>

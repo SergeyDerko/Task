@@ -37,7 +37,7 @@ namespace Metro_Dnepr
             _masLite = new[] {M11, M21, M22, M31, M33, M41, M42, M51, M52};
             Addevent();
             _timer.Tick += Test;
-            _timer.Interval = new TimeSpan(0, 0, 0, 0, 300);
+            _timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
         }
 
         private void Addevent()
@@ -48,6 +48,7 @@ namespace Metro_Dnepr
                 {
                     if (_start != null && _stop != null)
                     {
+                        Timer(false);
                         foreach (var j in _mas)
                         {
                             j.Fill = Brushes.Yellow;
@@ -62,6 +63,7 @@ namespace Metro_Dnepr
                         Start.Content = null;
                         Stop.Content = null;
                         Way.Content = null;
+
                     }
                     i.Fill = Brushes.Aqua;
                     if (!Equals(i, _start) && _start == null)

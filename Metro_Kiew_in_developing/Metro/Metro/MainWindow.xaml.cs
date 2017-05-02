@@ -95,11 +95,12 @@ namespace Metro
                         _start = null;
                         _stop = null;
                         _count = 0;
+                        Timer(false);
                         //Start.Content = null;
                         //Stop.Content = null;
                         //Way.Content = null;
                     }
-                    i.Fill = Brushes.Yellow;
+                    i.Fill = Brushes.Aqua;
                     if (!Equals(i, _start) && _start == null)
                     {
                         _start = i;
@@ -128,6 +129,7 @@ namespace Metro
             var qvery = new List<Ellipse>();
             Ellipse[] masStart;
             Ellipse[] masStop;
+            //Если выбранна только красная линия
             if (_masStationsRed.Contains(start) && _masStationsRed.Contains(stop))
             {
                 if (int.Parse(start.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
@@ -151,7 +153,55 @@ namespace Metro
                     }
                 }
             }
-            
+            //Если выбранна только синяя линия
+            if (_masStationsBlue.Contains(start) && _masStationsBlue.Contains(stop))
+            {
+                if (int.Parse(start.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
+                {
+                    masStart = _masOllBlue.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
+                    foreach (var i in masStart)
+                    {
+                        if (int.Parse(i.Tag.ToString()) > int.Parse(start.Tag.ToString()) &&
+                            int.Parse(i.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
+                            qvery.Add(i);
+                    }
+                }
+                if (int.Parse(start.Tag.ToString()) > int.Parse(stop.Tag.ToString()))
+                {
+                    masStart = _masOllBlue.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
+                    foreach (var i in masStart)
+                    {
+                        if (int.Parse(i.Tag.ToString()) < int.Parse(start.Tag.ToString()) &&
+                            int.Parse(i.Tag.ToString()) > int.Parse(stop.Tag.ToString()))
+                            qvery.Add(i);
+                    }
+                }
+            }
+            //Если выбранна только зеленая линия
+            if (_masStationsGreen.Contains(start) && _masStationsGreen.Contains(stop))
+            {
+                if (int.Parse(start.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
+                {
+                    masStart = _masOllGreen.OrderBy(x => int.Parse(x.Tag.ToString())).ToArray();
+                    foreach (var i in masStart)
+                    {
+                        if (int.Parse(i.Tag.ToString()) > int.Parse(start.Tag.ToString()) &&
+                            int.Parse(i.Tag.ToString()) < int.Parse(stop.Tag.ToString()))
+                            qvery.Add(i);
+                    }
+                }
+                if (int.Parse(start.Tag.ToString()) > int.Parse(stop.Tag.ToString()))
+                {
+                    masStart = _masOllGreen.OrderByDescending(x => int.Parse(x.Tag.ToString())).ToArray();
+                    foreach (var i in masStart)
+                    {
+                        if (int.Parse(i.Tag.ToString()) < int.Parse(start.Tag.ToString()) &&
+                            int.Parse(i.Tag.ToString()) > int.Parse(stop.Tag.ToString()))
+                            qvery.Add(i);
+                    }
+                }
+            }
+
             return qvery;
         }
 
@@ -180,7 +230,7 @@ namespace Metro
             }
             while (_count < _wey.Count)
             {
-                _wey[_count].Fill = Brushes.Yellow;
+                _wey[_count].Fill = Brushes.Aqua;
                 _count++;
                 break;
             }
